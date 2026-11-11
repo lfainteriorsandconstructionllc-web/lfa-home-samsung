@@ -1,0 +1,14 @@
+/build/
+/dist/
+/node_modules/
+launcher/config.js
+*.ipk
+*.wgt
+*.p12
+*.pem
+*.key
+.env*
+.DS_Store
+__pycache__/
+launcher/apps.js
+launcher/device-icons/

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="ambient-a" class="ambient" aria-hidden="true"></div>
+    <div id="ambient-b" class="ambient" aria-hidden="true"></div>
+    <div id="ambient-shade" aria-hidden="true"></div>
+    <div id="glow-a" class="glow" aria-hidden="true"></div>
+    <div id="glow-b" class="glow" aria-hidden="true"></div>
+    <header id="top">
+      <div id="home-brand">HOME</div>
+      <div id="profile-badge" class="profile-badge hidden" aria-live="polite"></div>
+      <div id="clock-block"><div id="greeting"></div><div id="timeline"><span id="time"></span><span id="date"></span></div></div>
+      <div id="pills" aria-label="Controles de Home"></div>
+      <div id="weather">
+        <span id="w-icon" aria-hidden="true"></span>
+        <span id="w-temp"></span>
+        <div id="w-copy" role="status"><span id="w-place"></span><span id="w-text"></span></div>
+        <div id="w-extra"><span id="w-hilo"></span><a id="w-source" href="https://open-meteo.com/" tabindex="-1">Open-Meteo</a></div>
+      </div>
+    </header>
+    <section id="hero" aria-label="Visor e información de la aplicación">
+      <div id="hero-copy"><div id="hero-eyebrow">TU PROYECTOR, A TU MANERA</div><h1 id="appname">Preparando Home…</h1><div id="position"></div><p id="hero-description">Tus aplicaciones y tus favoritas, en un solo lugar.</p><div id="home-note"></div></div>
+      <aside id="app-info" class="hidden" aria-labelledby="app-info-title">
+        <div id="agenda-header"><h2 id="app-info-title"></h2><span id="app-info-tag"></span></div>
+        <div id="volley-agenda" class="hidden">
+          <ol id="agenda-week" aria-label="Próximos siete días"></ol>
+          <ul id="agenda-matches" aria-label="Próximos partidos"></ul>
+          <div id="agenda-status" role="status"></div>
+        </div>
+        <div id="app-info-details" class="hidden">
+          <p id="app-info-description"></p>
+          <dl id="app-info-usage">
+            <div><dt>Último acceso</dt><dd id="app-info-last"></dd></div>
+            <div><dt>Aperturas desde Home</dt><dd id="app-info-count"></dd></div>
+          </dl>
+          <p id="app-info-unused">Aún no se ha abierto desde Home.</p>
+        </div>
+        <div id="hub-digest" class="hidden">
+          <div class="digest-section-title">En directo y radar deportivo</div>
+          <div id="digest-channel" class="digest-pill"></div>
+          <ul id="digest-matches" aria-label="Próximos partidos de voleibol"></ul>
+          <div id="digest-remote" class="digest-foot"></div>
+        </div>
+      </aside>
+      <div id="preview-window"><div id="preview-art"><span id="preview-backdrop" class="hidden"></span><span id="preview-initials"></span><span id="preview-symbol"></span><img id="preview-image" class="hidden" alt="Presentación de la aplicación seleccionada"><div id="preview-showcase" class="hidden"><span id="showcase-kicker"></span><strong id="showcase-title"></strong><span id="showcase-hint"></span></div></div><video id="home-video" preload="none" playsinline></video><object id="home-avplayer" type="application/avplayer"></object><div id="player-overlay" class="hidden" role="status"></div><div id="preview-kind">Imagen de presentación</div></div>
+      <div id="player-controls" class="hidden" aria-label="Vídeo y controles de Home"></div>
+      <div id="dock-meta" class="hidden" aria-hidden="true"><span id="dock-meta-title"></span><span id="dock-meta-page"></span></div>
+    </section>
+    <main id="viewport" aria-label="Barra de aplicaciones">
+      <div id="rows"></div>
+      <div id="empty" class="hidden"><div id="empty-title">No se han encontrado aplicaciones</div><p id="empty-description">Pulsa Actualizar para reintentar.</p></div>
+    </main>
+    <section id="panel" class="hidden" aria-label="Configuración y aplicaciones">
+      <header id="panel-header"><h1 id="panel-title"></h1><p id="panel-description"></p><div id="panel-buttons"></div><div id="library-hero" class="hidden" aria-live="polite"><div id="library-hero-name"></div><div id="library-hero-position"></div><div id="library-hero-description"></div></div></header>
+      <div id="panel-content"><div id="panel-list"></div><div id="panel-empty" class="hidden"></div></div>
+    </section>
+    <div id="home-command-overlay" class="hidden">
+      <div id="home-command-menu" role="dialog" aria-modal="true" aria-label="Menú LFA Home"></div>
+    </div>
+    <footer id="help"><span id="help-text">Preparando aplicaciones…</span><span id="navigation-status"></span></footer>
+    <div id="catalog-status" role="status">Consultando el proyector…</div>
+    <div id="loading" role="status">Actualizando…</div>
+    <div id="msg" role="alert" aria-live="polite"></div>
+    <div id="screensaver" class="hidden" role="status" aria-label="Salvapantallas"><div id="ss-block"><div id="ss-time"></div><div id="ss-date"></div><div id="ss-weather"></div></div></div>
+  </div>
+  <script src="config.js"></script>
+  <script src="apps.js"></script>
+  <script src="home-model.js"></script>
+  <script src="home-theme.js"></script>
+  <!-- vendor/: copias de app/model.js y app/providers/turkey.js que genera instalar.py (no editar aquí). -->
+  <script src="vendor/volley-model.js"></script>
+  <script src="vendor/turkey.js"></script>
+  <script src="vendor/russia.js"></script>
+  <script src="home-media.js"></script>
+  <script src="home-weather.js"></script>
+  <script src="home-preferences.js"></script>
+  <script src="$WEBAPIS/webapis/webapis.js"></script>
+  <script src="home-player.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

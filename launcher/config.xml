@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+        id="http://hacktv.local/home" version="1.27.2" viewmodes="maximized">
+  <tizen:application id="HkTvHome01.Home" package="HkTvHome01" required_version="5.5"/>
+  <name>LFA Home</name>
+  <icon src="lfa-home-icon.png"/>
+  <content src="index.html"/>
+  <feature name="http://tizen.org/feature/screen.size.all"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.info"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+  <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+  <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <tizen:privilege name="http://tizen.org/privilege/location"/>
+  <access origin="*" subdomains="true"/>
+  <tizen:content-security-policy>default-src 'self'; script-src 'self' file:; style-src 'self' 'unsafe-inline'; img-src 'self' file: data: https:; connect-src https:; media-src 'self' https: blob:; object-src 'self'; frame-src 'none'; base-uri 'self'</tizen:content-security-policy>
+  <tizen:app-control>
+    <tizen:src name="index.html" reload="disable"/>
+    <tizen:operation name="http://tizen.org/appcontrol/operation/default"/>
+  </tizen:app-control>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable"
+                 background-support="enable" encryption="disable" install-location="auto"
+                 hwkey-event="enable" pointing-device-support="enable"/>
+</widget>
